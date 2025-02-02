@@ -1,4 +1,4 @@
-package com.example.allowancemanager
+package com.example.androidapp
 
 import android.content.Intent
 import android.os.Bundle
@@ -17,10 +17,10 @@ class LoginActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        val emailInput = findViewById<EditText>(R.id.emailEditText)
-        val passwordInput = findViewById<EditText>(R.id.passwordEditText)
-        val loginButton = findViewById<Button>(R.id.loginButton)
-        val signupButton = findViewById<Button>(R.id.signupRedirectButton)
+        val emailInput = findViewById<EditText>(R.id.etUsername) ?: return
+        val passwordInput = findViewById<EditText>(R.id.etPassword) ?: return
+        val loginButton = findViewById<Button>(R.id.btnLogin)
+        val signupButton = findViewById<Button>(R.id.btnSignUp)
 
         loginButton.setOnClickListener {
             val email = emailInput.text.toString().trim()
@@ -29,8 +29,7 @@ class LoginActivity : AppCompatActivity() {
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 auth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener { task ->
-                        if (task.isSuccessful) {
-                            Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
+                        if (auth.currentUser != null) {
                             startActivity(Intent(this, HomeActivity::class.java))
                             finish()
                         } else {

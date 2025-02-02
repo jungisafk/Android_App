@@ -1,4 +1,4 @@
-package com.example.allowancemanager
+package com.example.androidapp
 
 import android.content.Intent
 import android.os.Bundle
