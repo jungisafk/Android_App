@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "768193643636",
+    "project_id": "allowance-management-85b08",
+    "storage_bucket": "allowance-management-85b08.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768193643636:android:e6935019c024d8b287bd21",
+        "android_client_info": {
+          "package_name": "com.example.androidapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCn4X3d0fscFHHLZ6yG4fiZbkWxvOaT8Bg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
